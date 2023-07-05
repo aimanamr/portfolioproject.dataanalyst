@@ -1,3 +1,7 @@
+--COVID 19 DATA EXPLORATION
+
+--Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
+
 --SELECT *
 --FROM portfolioproject.dbo.CovidDeaths$ CovidDeaths$
 --ORDER BY 3,4
@@ -68,7 +72,8 @@ and dea.date = vac.date
 WHERE dea.continent IS NOT NULL
 ORDER BY 2,3
 
---use CTE
+--use CTE to calculate partition by in previous query
+--to calculate percentage of population that receive vaccine
 
 with PopsVac (Continent, Location, Date, Population, New_vaccinations, Rolling_vaccinated)
 as 
